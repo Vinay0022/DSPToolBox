@@ -1,0 +1,108 @@
+*,*:after,*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: whitesmoke;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* background-image: url("https://source.unsplash.com/random/2005*1005"); */
+  background-image: url("https://www.mathworks.com/help/examples/graphics/win64/ChangeColorSchemeColormapHotExample_01.png");
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.hamburger-icon {
+  position: absolute;
+/*   width: 60px; */
+/*   height: 50px; */
+  background-color:#0e1818 ;
+  font-size: 3.5rem;
+/*   text-align: center; */
+  padding: .2rem 1.5rem;
+  top: 50%;
+  transform: translatey(-50%);
+  transition: all .35s ease-out; 
+  z-index: 1;
+}
+.close-icon,.hamburger-icon {
+  cursor: pointer;
+}
+.navigation-bar {
+  background-color: #0e1818;
+  opacity: 1;
+  width: 300px;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  transition: all .45s ease-out;
+  left: 0%;
+}
+.close-navbar{
+  left: -30%;
+}
+.open-navber {
+  left: 0%;
+}
+
+.icon-box {
+  position: absolute;
+/*   background-color: aquamarine; */
+  font-size: 3.5rem;
+/*   text-align: center; */
+  padding: .1rem 1.3rem;
+  top: 0;
+  right: 0;
+  transition: all .35s ease-out; 
+  z-index: 1;
+}
+.nav-title {
+  position: absolute;
+  font-size: 2rem;
+  top: 10%;
+  left: 20%;
+  color: #2f4f4f;
+}
+.nav-menu {
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  width: 100%;
+/*   background-color: #BB2CD9; */
+}
+.nav-link {
+  text-decoration: none;
+  display: block;
+  width:  100%;
+  height: auto;
+/*   background-color: tomato; */
+  padding: 3rem 0rem 3rem 4rem;
+  font-size: 2rem;
+  color: #0A79DF;
+  font-family: cursive;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: all .2s ease;
+  text-align: justify;
+  
+}
+.nav-link:not(:last-child) {
+/*   margin-bottom: 2rem; */
+  border-bottom: 1px solid rgba(87, 96, 111, .1);
+  
+}
+.nav-link:hover {
+  background-color: #0A79DF;
+  color: #f7f7f7;
+}

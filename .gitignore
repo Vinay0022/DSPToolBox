@@ -1,0 +1,5 @@
+# Virtual Enviroment
+venv/
+
+#Byte-compiled
+__pycache__/

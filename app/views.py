@@ -5,12 +5,14 @@ from flask import render_template
 
 @app.route("/")
 def index():
-    return render_template("index.html") 
+    return render_template("index2.html") 
 
-@app.route("/Home.html")
-def Home():
-     return render_template("Home.html")
+@app.route("/index2.html")
+def index2():
+     return render_template("index2.html")
 
-# @app.route("/filtering")
-# def index2():
-#     return gui.py
+@app.route("/Operations2.html")
+def Operations():
+    return render_template("Operations2.html")
+
+

@@ -1,48 +1,23 @@
-from scipy.signal import filtfilt
-from scipy import stats
-import csv
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import scipy
-
-# def plot():
-#   data = pd.read_csv('./three_freq_signal2.csv')
-#   sensor_data = data[['data']]
-
-#   sensor_data = np.array(sensor_data)
-
-#   time = np.linspace(0, 0.0002, 1001)
-
-#   plt.plot(time,sensor_data)
-#   plt.show()
-
-# plot()
-def plot():
-   df = pd.read_csv("three_freq_signal2.csv")
-   sensor_data = data[['data']]
-`  sensor_dataa = np.array(sensor_data)
-    time=np.linspace (0,0.0002,4000)
-    plt.plot(time,sensor_dataa)
-    plt.show()
-    plot()
-
-# filtered_signal = bandPassfilter(sensor_dataa)
-# plt.plot
-# def bandPassfilter(signal):
-#   fs = 4000.0
-#   lowcut = 20.0
-#   highcut = 50.0
-
-#   nyq = 0.5*fs
-#   low = lowcut/nyq
-#   high = highcut/nyq
-
-#   order = 2
-
-#   b,a = scipy.signal.butter(order,[low,high], 'bandpass',analog=False)
-#   y = scipy.signal.filtfilt(b,a,signal,axis=0)
-
-#   return(y)
-
-# plot()
+  
+# Creating two numpy One-Dimensional
+# array using the array() method
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([0, 0.5, 1, 1.5])
+  
+# Display the arrays
+print("Array1:->\n", arr1)
+print("\nArray2:->\n", arr2)
+  
+# Check the Dimensions of both the arrays
+print("\nDimensions of Array1:->\n", arr1.ndim)
+print("\nDimensions of Array2:->\n", arr2.ndim)
+  
+# Check the Shape of both the arrays
+print("\nShape of Array1:->\n", arr1.shape)
+print("\nShape of Array2:->\n", arr2.shape)
+  
+# To return the discrete linear convolution
+# of two one-dimensional sequences,
+# use the numpy.convolve() method in Python Numpy
+print("\nResult:->\n", np.convolve(arr1, arr2))

@@ -2,8 +2,8 @@ import numpy as np
   
 # Creating two numpy One-Dimensional
 # array using the array() method
-arr1 = np.array([1, 2, 3, 4, 5])
-arr2 = np.array([0, 0.5, 1, 1.5])
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([4,1,1,2])
   
 # Display the arrays
 print("Array1:->\n", arr1)

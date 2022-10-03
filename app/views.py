@@ -1,3 +1,4 @@
+import json
 from types import DynamicClassAttribute
 from app import app
 import numpy as np
@@ -30,6 +31,7 @@ def Convolution():
 def Pracitse():
  list = []
  list2 = []
+ list3=[]
  if request.method == "POST":
        num1 = request.form.get('num1')
        num2 = request.form.get('num2')
@@ -47,25 +49,29 @@ def Pracitse():
        fnum4 =float(num4) 
        fnum5 =float(num5) 
        fnum6 =float(num6) 
+       fnum7 =float(num7) 
+       fnum8 =float(num8) 
 
-    #    list = [num1,num2,num3,num4,num5]
-    #    list2 = [num6,num7,num8,num9,num10]
        list.append(fnum1)
        list.append(fnum2)
        list.append(fnum3)
-    #    list.append(num4)
-    #    list.append(num5)
-       list2.append(fnum4)
+       list.append(num4)
+
        list2.append(fnum5)
        list2.append(fnum6)
-    #    list2.append(num9)
-    #    list2.append(num10)
+       list2.append(fnum7)
+       list2.append(fnum8)
        print(list)
        print(list2)
 
        arr1 = np.array(list,dtype=float)
        arr2 = np.array(list2,dtype=float)
+       list4 =np.convolve(arr1,arr2,mode='full')
+       json_str = json.dumps({'nums': list4.tolist()})
+
+       print(json_str)  # 👉️ {"nums": [1, 2, 3, 4]}
+       print(type(json_str))  # 👉️ <class 'str'>
        print("Result\n",np.convolve(arr1,arr2,mode='full'))
     #    list3 =np.convolve(arr1,arr2,mode='valid') 
-    #    return list3
+       return json_str 
  return render_template("Practise.html")

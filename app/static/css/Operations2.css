@@ -7,6 +7,7 @@
 	 font-family: 'Open Sans', system-ui;
 }
 
+
 h1{
   color: #005ab7;
   padding-left:40px ;
@@ -50,6 +51,7 @@ h1 a{
  #grid > a {
 	 position: relative;
 	 transform-style: preserve-3d;
+	 text-decoration: none;
 }
  #grid > a:hover {
 	 cursor: pointer;

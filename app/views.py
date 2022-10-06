@@ -55,7 +55,7 @@ def Pracitse():
        list.append(fnum1)
        list.append(fnum2)
        list.append(fnum3)
-       list.append(num4)
+       list.append(fnum4)
 
        list2.append(fnum5)
        list2.append(fnum6)

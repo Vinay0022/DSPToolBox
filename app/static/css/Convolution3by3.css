@@ -1,0 +1,40 @@
+body{
+  background-color:  #2F3242;
+}
+.main{
+  margin-top: 10%;
+  margin-left: 35%;
+  background-color: rgb(105, 120, 133);
+  margin-right: 30%;
+  padding: 35px;
+  border-radius: 45px;
+} 
+.main >h1{
+  text-align: center;
+}
+
+#num2,#num3,#num4,#num5,#num5,#num6,#num7,#num8{
+  
+  border-radius: 20px;
+  background-color:rgb(255, 255, 255);
+}
+
+#num1{
+  background-color:rgb(255, 255, 255);
+  border-radius: 20px;
+}
+.section1{
+  left:0;
+  padding-left: 40px;
+
+}
+.section2{
+  margin-right: 500px;
+  right:0;
+  padding-left: 40px;
+}
+
+#button{
+  border-radius: 5px;
+  padding: 6.5px;
+}

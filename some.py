@@ -3,8 +3,8 @@ import numpy as np
 # Creating two numpy One-Dimensional
 # array using the array() method
 arr1 = np.array([1, 2, 3, 4])
-arr2 = np.array([4,1,1,2]
-taupe-cucurucho-a4990d.netlify.app)
+# arr2 = np.array([4,1,1,2]
+arr2 = np.array([1,2,2,1])
   
 # Display the arrays
 print("Array1:->\n", arr1)

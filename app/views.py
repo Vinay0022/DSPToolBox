@@ -20,6 +20,46 @@ def index():
 def button():
     return render_template("Button.html") 
 
+@app.route("/Polynomial.html",methods=['GET','POST'])
+def Polynomial():
+ list = []
+ list2 = []
+ list3=[]
+ if request.method == "POST":
+       num1 = request.form.get('num1')
+       num2 = request.form.get('num2')
+       num3 = request.form.get('num3')
+       num5 = request.form.get('num5')
+       num6 = request.form.get('num6')
+       num7 = request.form.get('num7')
+       fnum1 =float(num1) 
+       fnum2 =float(num2) 
+       fnum3 =float(num3) 
+       fnum5 =float(num5) 
+       fnum6 =float(num6) 
+       fnum7 =float(num7) 
+
+       list.append(fnum1)
+       list.append(fnum2)
+       list.append(fnum3)
+
+       list2.append(fnum5)
+       list2.append(fnum6)
+       list2.append(fnum7)
+       print(list)
+       print(list2)
+       rx = np.polynomial.polynomial.polymul(list, list2)
+    #    arr1 = np.array(list,dtype=float)
+    #    arr2 = np.array(list2,dtype=float)
+    #    list4 =np.convolve(arr1,arr2,mode='full')
+       json_str = json.dumps({'nums': rx.tolist()})
+
+       print(json_str)  # 👉️ {"nums": [1, 2, 3, 4]}
+       print(type(json_str))  # 👉️ <class 'str'>
+    #    print("Result\n",np.convolve(arr1,arr2,mode='full'))
+    #    list3 =np.convolve(arr1,arr2,mode='valid') 
+       return json_str 
+ return render_template("Polynomial.html")
 
 @app.route("/Convolution3by3.html",methods=['GET','POST'])
 def Convolution3by3():
